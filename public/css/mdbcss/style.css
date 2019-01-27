@@ -1,0 +1,21 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("https://wallpapercave.com/wp/zuiHX0K.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#intro2 {
+    background: url("https://lordshiplanebaptistchurch.weebly.com/uploads/9/1/8/4/9184029/4986499_orig.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
