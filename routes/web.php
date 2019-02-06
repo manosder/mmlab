@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 Route::get('/botman/tinker', 'BotManController@tinker');
@@ -35,19 +32,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    return view('test');
+Route::get('lessons', function () {
+    return view('lessons');
 });
-
-Route::get('test2', function () {
-    return view('test2');
+Route::get('erga', function () {
+    return view('erga');
+});
+Route::get('research', function () {
+    return view('research');
 });
 Route::get('chat', function () {
     return view('chat');
 });
 
 Route::get('/first', function () {
-    return view('first');
+    $posts = App\Post::all();
+    return view('first',  compact('posts'));
 });
 
 Route::group(['prefix' => 'admin'], function () {
@@ -57,3 +57,10 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/meetus', function () {
     return view('meetus');
 });
+
+/*
+Route::get('/posts', function () {
+    $posts = App\Post::all();
+    return view('posts', compact('posts'));
+});
+*/

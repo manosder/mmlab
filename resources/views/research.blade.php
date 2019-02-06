@@ -112,297 +112,138 @@
       <div class="container">
 
 
- <hr class="my-5">
-        <!--Section: Best Features******************************************************************-->
-                <section id="best-features" class="text-center">
+        <!--Section: Examples**********************************************************************-->
+                  <section id="examples" class="text-center">
 
-                  <!-- Heading -->
-                  <h2 class="mb-5">Best Features</h2>
-
-                  <!--Grid row-->
-                  <div class="row d-flex justify-content-center mb-4">
+                    <!--Grid row-->
+                    <div class="row">
 
                       <!--Grid column-->
-                      <div class="col-md-12">
+                      <div class="col-lg-4 col-md-4 mb-4">
 
-                          <!-- Description -->
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
 
-
-
+                        <h4 class="my-4 font-weight-bold">Ερευνα</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
 
                       </div>
                       <!--Grid column-->
 
-                  </div>
-                  <!--Grid row-->
-
-                  <!--Grid row-->
-                  <div class="row">
-
                       <!--Grid column-->
-                      <div class="col-md-4 mb-1">
-                          <i class="fa fa-rocket fa-4x orange-text"></i>
-                          <h4 class="my-2 font-weight-bold">Ερευνητικά & Αναπτυξιακά Έργα</h4>
-                          <p class="grey-text">Το ερευνητικό προσωπικό του εργαστηρίου έχει συμμετάσχει στην υλοποίηση ενός πολύ μεγάλου αριθμού ερευνητικών και αναπτυξιακών έργων που έχουν χρηματοδοτηθεί από εθνικούς και κοινοτικούς πόρους..</p>
+                      <div class="col-lg-4 col-md-4 mb-4">
+
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
+
+                        <h4 class="my-4 font-weight-bold">Προπτυχιακά Μαθήματα</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
+
                       </div>
                       <!--Grid column-->
 
                       <!--Grid column-->
-                      <div class="col-md-4 mb-1">
-                          <i class="fa fa-book fa-4x red-text"></i>
-                          <h4 class="my-4 font-weight-bold">Εκπαίδευση</h4>
-                          <p class="grey-text">Το προσωπικό του Εργαστηρίου υποστηρίζει μία σειρά μαθημάτων του Προγράμματος Σπουδών του ΤΜΗΥΠ και του Μεταπτυχιακού Προγράμματος "Επιστήμη και Τεχνολογία των Υπολογιστών" του ΤΜΗΥΠ</p>
+                      <div class="col-lg-4 col-md-4 mb-4">
+
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/50.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
+
+                        <h4 class="my-4 font-weight-bold">Μεταπτυχιακά Μαθήματα</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
+
                       </div>
                       <!--Grid column-->
-
                       <!--Grid column-->
-                      <div class="col-md-4 mb-1">
-                          <i class="fa fa-search  fa-4x indigo-text"></i>
-                          <h4 class="my-4 font-weight-bold">Έρευνα</h4>
-                          <p class="grey-text">Οι Ερευνητικές δραστηριότητες του Εργαστηρίου καλύπτουν ένα ευρύ φάσμα θεματικών περιοχών.</p>
-                      </div>
-                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-4 mb-4">
 
-                  </div>
-                  <!--Grid row-->
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/53.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
 
-                </section>
-        <!--Section: Best Features******************************************************************-->
-
-
-          <hr class="my-5">
-
-        <!--Section: News******************************************************************-->
-                <section id="LatestNews" class="text-center">
-
-                  <!-- Heading -->
-                  <h2 class="mb-5">Latest News</h2>
-
-                  <!--Grid row-->
-                  <div class="row d-flex justify-content-center mb-4">
-
-                      <!--Grid column-->
-                      <div class="col-md-12">
-
-                          <!-- Description -->
-
-
-
+                        <h4 class="my-4 font-weight-bold">Διπλωματικές Εργασίες</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
 
                       </div>
                       <!--Grid column-->
 
-                  </div>
-                  <!--Grid row-->
-
-                  <!--Grid row-->
-                  <div class="row">
-              		@foreach($posts as $post)
-              			<div class="col-md-3">
-              				<a href="/post/{{ $post->slug }}">
-              					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
-              					<span>{{ $post->title }}</span>
-              				</a>
-              			</div>
-              		@endforeach
-              		</div>
-                  <!--Grid row-->
-
-                </section>
-        <!--Section: News******************************************************************-->
-
-          <hr class="my-5">
 
 
-<!--Section: Gallery**********************************************************************-->
-<section id="gallery">
 
-    <!-- Heading -->
-    <h2 class="mb-5 font-weight-bold text-center">Gallery heading</h2>
+                    </div>
+                    <!--Grid row-->
 
-    <!--Grid row-->
-    <div class="row">
+                    <!--Grid row-->
+                    <div class="row">
 
-        <!--Grid column-->
-        <div class="col-md-6 mb-4">
+                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-4 mb-4">
 
-          <!--Carousel Wrapper-->
-          <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-              <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-              <li data-target="#carousel-example-1z" data-slide-to="3"></li>
-              <li data-target="#carousel-example-1z" data-slide-to="4"></li>
-              <li data-target="#carousel-example-1z" data-slide-to="5"></li>
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/51.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
 
-            </ol>
-            <!--/.Indicators-->
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-              <!--First slide-->
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide1.jpg" alt="First slide">
-              </div>
-              <!--/First slide-->
+                        <h4 class="my-4 font-weight-bold">Έργα</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
 
-              <!--Second slide-->
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide2.jpg" alt="Second slide">
-              </div>
-              <!--/Second slide-->
+                      </div>
+                      <!--Grid column-->
 
-              <!--Third slide-->
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide3.jpg" alt="Third slide">
-              </div>
-              <!--/Third slide-->
+                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-4 mb-4">
 
-              <!--Fourth slide-->
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide4.jpg" alt="Fourth slide">
-              </div>
-              <!--Fourth slide-->
+                        <div class="view overlay z-depth-1-half">
+                          <img src="https://mdbootstrap.com/img/Photos/Others/images/52.jpg" class="img-fluid">
+                          <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
 
-              <!--Fifth slide-->
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide5.jpg" alt="Fifth slide">
-              </div>
-              <!--/Fifth slide-->
+                        <h4 class="my-4 font-weight-bold">Τα νέα μας</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                          aperiam minima
+                          assumenda deleniti hic.</p>
 
-              <!--6i slide-->
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://mmlab.ceid.upatras.gr/images/stories/highslide/slide6.jpg" alt="Sixth slide">
-              </div>
-              <!--/6i slide-->
-            </div>
-            <!--/.Slides-->
-            <!--Controls-->
-            <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-            <!--/.Controls-->
-          </div>
-          <!--/.Carousel Wrapper-->
-
-        </div>
-        <!--Grid column-->
-        <div class="col-md-6">
-
-            <!--Excerpt-->
-            <a href="" class="teal-text">
-                <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Some Art </strong></h6>
-            </a>
-            <h4 class="mb-3"><strong>This is title of the news</strong></h4>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis
-                debitis aut rerum.</p>
-
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-                placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis
-                debitis aut rerum.</p>
-            <p>by <a><strong>Athanasios Tsakalidis</strong></a>, 26/08/2016</p>
-            <a class="btn btn-primary btn-md">Read more</a>
-
-        </div>
-        <!--Grid column-->
+                      </div>
+                      <!--Grid column-->
 
 
-    </div>
-    <!--Grid row-->
 
-</section>
-<!--Section: Gallery**********************************************************************-->
+                    </div>
+                    <!--Grid row-->
 
-<hr class="my-5">
+                  </section>
+        <!--Section: Examples**********************************************************************-->
 
-<!--Section: Contact**********************************************************************-->
-<section id="contact">
+                  <hr class="my-5">
 
-    <!-- Heading -->
-    <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
-
-    <!--Grid row-->
-    <div class="row">
-
-      <!--Grid column-->
-      <div class="col-lg-5 col-md-12">
-        <!-- Form contact -->
-        <form class="p-5 grey-text">
-          <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
-            <input type="text" id="form3" class="form-control form-control-sm">
-            <label for="form3">Your name</label>
-          </div>
-          <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
-            <input type="text" id="form2" class="form-control form-control-sm">
-            <label for="form2">Your email</label>
-          </div>
-          <div class="md-form form-sm"> <i class="fa fa-tag prefix"></i>
-            <input type="text" id="form32" class="form-control form-control-sm">
-            <label for="form34">Subject</label>
-          </div>
-          <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
-            <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
-            <label for="form8">Your message</label>
-          </div>
-          <div class="text-center mt-4">
-            <button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
-          </div>
-        </form>
-        <!-- Form contact -->
-      </div>
-      <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-lg-7 col-md-12">
-
-      <!--Grid row-->
-      <div class="row text-center">
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-3">
-
-            <p><i class="fa fa-map fa-1x mr-2 grey-text"></i>Πανεπιστήμιο Πατρών, Ρίο , 26504</p>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-3">
-
-            <p><i class="fa fa-building fa-1x mr-2 grey-text"></i>Mon - Fri, 8:00-22:00</p>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-3">
-
-            <p><i class="fa fa-phone fa-1x mr-2 grey-text"></i>(+30 2610) 996960</p>
-
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-      <!--Google map-->
-      <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
-
-    </div>
-    <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-</section>
-<!--Section: Contact**********************************************************************-->
 
       </div>
   </main>
