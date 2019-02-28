@@ -58,6 +58,10 @@ Route::get('/meetus', function () {
     return view('meetus');
 });
 
+Route::get('post/{slug}', function($slug){
+	$post = App\Post::where('slug', '=', $slug)->firstOrFail();
+	return view('post', compact('post'));
+});
 /*
 Route::get('/posts', function () {
     $posts = App\Post::all();
