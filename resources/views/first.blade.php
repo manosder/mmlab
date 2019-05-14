@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Εργαστήριο Γραφικών, Πολυμέσων & Γεωγραφικών Συστημάτων</title>
+  <link rel="shortcut icon" href="../../logo1.png" type="image/x-icon" />
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -197,13 +199,34 @@
 
                   <!--Grid row-->
                   <div class="row">
+                    <?php $count = 0; ?>
               		@foreach($posts as $post)
+                  <?php if($count == 4) break; ?>
+
+
               			<div class="col-md-3">
-              				<a href="/post/{{ $post->slug }}">
-              					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
-              					<span>{{ $post->title }}</span>
-              				</a>
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                          <img class="card-img-top" src="{{ Voyager::image( $post->image ) }}" alt="Card image cap">
+                          <a href="/post/{{ $post->slug }}">
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+                          <!-- Title -->
+                          <h4 class="card-title">{{ $post->title }}</h4>
+                          <!-- Text -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <!-- Button -->
+                          <a href="/post/{{ $post->slug }}" class="btn btn-primary">Read More</a>
+
+                        </div>
               			</div>
+                    <?php $count++; ?>
               		@endforeach
               		</div>
                   <!--Grid row-->

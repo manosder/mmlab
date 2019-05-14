@@ -46,7 +46,7 @@ Route::get('chat', function () {
 });
 
 Route::get('/first', function () {
-    $posts = App\Post::all();
+    $posts = App\Post::orderBy('id', 'desc')->limit(4)->get();
     return view('first',  compact('posts'));
 });
 

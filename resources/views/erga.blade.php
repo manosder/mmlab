@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Εργαστήριο Γραφικών, Πολυμέσων & Γεωγραφικών Συστημάτων</title>
+    <link rel="shortcut icon" href="../../logo1.png" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -50,6 +51,9 @@
   }
 
 }
+.research{
+  height: 40%;
+}
 </style>
 
 <body>
@@ -57,7 +61,7 @@
   <!-- Start your project here-->
   <div class="se-pre-con"></div>
   <!--Main Navigation-->
-  <header>
+  <header class="research">
 
     @include('inc.navbar')
 
@@ -298,10 +302,7 @@
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <!-- JQuery -->
-<script type="text/javascript" src="{{ asset('js/mdbjs/jquery-3.3.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/mdbjs/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/mdbjs/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/mdbjs/mdb.min.js') }}"></script>
+-
   <!--Google Maps-->
   <script src="https://maps.google.com/maps/api/js"></script>
 
@@ -330,6 +331,10 @@
     google.maps.event.addDomListener(window, 'load', regular_map);
   </script>
 
+  <script type="text/javascript" src="{{ asset('js/mdbjs/jquery-3.3.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/mdbjs/popper.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/mdbjs/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/mdbjs/mdb.min.js') }}"></script>
 
 
   <!-- Carousel options -->

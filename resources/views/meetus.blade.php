@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Εργαστήριο Γραφικών, Πολυμέσων & Γεωγραφικών Συστημάτων</title>
+    <link rel="shortcut icon" href="../../logo1.png" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -13,7 +14,9 @@
   <link href="{{ asset('css/mdbcss/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
   <link href="{{ asset('css/mdbcss/mdb.min.css') }}" rel="stylesheet" type="text/css" >
   <link href="{{ asset('css/mdbcss/style.css') }}" rel="stylesheet" type="text/css" >
-
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <style>
@@ -52,6 +55,138 @@
     font-size: 14px;
   }
 }
+
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007bff !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007bff !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.team {
+  height: auto;
+}
 </style>
 
 <body>
@@ -59,49 +194,10 @@
   <!-- Start your project here-->
   <div class="se-pre-con"></div>
   <!--Main Navigation-->
-  <header>
+  <header class="team">
 @include('inc.navbar')
 
-    <!--Mask-->
-    <div id="intro" class="view">
 
-        <div class="mask rgba-black-strong">
-
-            <div class="container-fluid d-flex align-items-center justify-content-center h-100">
-
-                <div class="row d-flex justify-content-center text-center">
-
-                    <div class="col-md-10">
-
-                        <!-- Heading -->
-                        <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">The Team</h2>
-
-                        <!-- Divider -->
-                        <hr class="hr-light">
-
-                        <!-- Description -->
-                        <h4 class="white-text my-4">Εργαστήριο Γραφικών, Πολυμέσων & Γεωγραφικών Συστημάτων</h4>
-                        <button type="button" class="btn btn-outline-white collapsible text-center">Read more<i class="fa fa-book ml-2"></i></button>
-                       <div class="content">
-                         <div class="article-content"><p>Το <strong>Εργαστήριο Γραφικών, Πολυμέσων και Γεωγραφικών Συστημάτων</strong> του Τμήματος Μηχανικών Ηλεκτρονικών Υπολογιστών και Πληροφορικής (ΤΜΗΥΠ) του Πανεπιστημίου Πατρών ιδρύθηκε το 1994. Το εκπαιδευτικό και ερευνητικό έργο του εργαστηρίου εντάσσεται στα πλαίσια του τομέα Λογικού των Υπολογιστών του Τμήματος.
-                            <br>Οι βασικές δραστηριότητες του αφορούν:</p>
-                         <ul>
-                         <li>Tην <strong>υποστήριξη της προπτυχιακής και της μεταπτυχιακής εκπαίδευσης</strong> του Τμήματος Μηχανικών Ηλεκτρονικών Υπολογιστών και Πληροφορικής του Πανεπιστημίου Πατρών.</li>
-                         <li>Tη διεξαγωγή <strong>θεωρητικής έρευνας</strong> με στόχο την προαγωγή της επιστήμης στις περιοχές που δραστηριοποιούνται τα μέλη του.</li>
-                         <li>Tην <strong>ανάπτυξη εφαρμογών και εργαλείων</strong> Γραφικών, Πολυμέσων, Γεωγραφικών Συστημάτων και Τεχνολογιών Διαδικτύου στα πλαίσια της υλοποίησης εθνικών και κοινοτικών ερευνητικών προγραμμάτων και εκπόνησης διπλωματικών εργασιών.</li>
-                         </ul>
-       </div>
-                       </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-    <!--/.Mask-->
 
   </header>
   <!--Main Navigation-->
@@ -110,203 +206,352 @@
   <main class="mt-5">
       <div class="container">
 
-<!--Section: Examples**********************************************************************-->
-          <section id="examples" >
+        <!-- Team -->
+        <section id="team" class="pb-5">
+            <div class="container">
+                <h5 class="section-title h1">OUR TEAM</h5>
+                <div class="row">
+                  <!-- Team Leader -->
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                          <div class="mainflip">
+                              <div class="frontside">
+                                  <div class="card">
+                                      <div class="card-body text-center">
+                                          <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                          <h4 class="card-title">Athanasios Tsakalidis</h4>
+                                          <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                          <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="backside">
+                                  <div class="card">
+                                      <div class="card-body text-center mt-4">
+                                          <h4 class="card-title">Athanasios Tsakalidis</h4>
+                                          <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                          <ul class="list-inline">
+                                              <li class="list-inline-item">
+                                                  <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                      <i class="fa fa-facebook"></i>
+                                                  </a>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                      <i class="fa fa-twitter"></i>
+                                                  </a>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                      <i class="fa fa-skype"></i>
+                                                  </a>
+                                              </li>
+                                              <li class="list-inline-item">
+                                                  <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                      <i class="fa fa-google"></i>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ./Team Leader -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
+                    <!-- Team member -->
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                            <div class="mainflip">
+                                <div class="frontside">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <p><img class=" img-fluid" src="https://Sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image"></p>
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="backside">
+                                    <div class="card">
+                                        <div class="card-body text-center mt-4">
+                                            <h4 class="card-title">Georgios Domalis</h4>
+                                            <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                        <i class="fa fa-google"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./Team member -->
 
-            <!--Grid row-->
-            <div class="row">
-
-              <!--Grid column-->
-
-              <div class="col-lg-4 col-md-4 mb-4">
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://mmlab.ceid.upatras.gr/images/stories/people/PHOTO%20Thanasis%20Tsakalidis.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
                 </div>
-              </div>
-                <div class="col-lg-12 col-md-12 mb-12">
-                <h4 class="my-4 font-weight-bold">Athanasios Tsakalidis</h4>
-                <p class="grey-text">Athanasios K. Tsakalidis is a computer-scientist, professor of the University of Patras. He is a graduate in Mathematics from the University of Thessaloniki and a post-graduate in Informatics from the University of Saarland, Germany. He worked as a researcher at the University of Saarland. He has been student and collaborator of Prof. Kurt Mehlhorn, Director of the Max-Planck Institute of Informatics in Germany for twelve years. He joined the faculty of the Department of Computer Engineering and Informatics at the University of Patras and served his department as Chairman for 12 years. During the period 1993–2005 he was a member of the Board of Directors of the Research Academic Computer Technology Institute (RACTI), in 1997–2007, Coordinator of Research and Development of RACTI. He is one of the contributors to the “Handbook of Theoretical Computer Science” (Elsevier and MIT-Press, 1990, 48 co-authors from 12 countries). Between these contributors there are six Turing Award recipients. He has published many scientific articles, having a special contribution to the solution of elementary problems in the area of data structures.  Scientific interests: Health Informatics, Data Structures, Computational Geometry, Information Retrieval, Computer Graphics, Data Bases, and Bio-Informatics.</p>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Dieuthintis mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-              </div>
-              <!--Grid column-->
-
-
-
-
-
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-
             </div>
-            <!--Grid row-->
-
-            <!--Grid row-->
-            <div class="row">
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-4 col-md-12 mb-4 ">
-
-                <div class="view overlay z-depth-1-half">
-                  <img src="https://www.w3schools.com/w3images/team1.jpg" class="img-fluid">
-                  <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-
-                <h4 class="my-4 font-weight-bold">Georgios Domalis</h4>
-                <p>
-                    <i class="fa fa-address-card mr-3"></i>Didaktorikos Foititis & upefthinos mmLab
-                </p>
-                <p>
-                    <i class="fa fa-envelope mr-3"></i> georgios.domalis@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> (+30) 698 34 82 792 </p>
-                <p>
-                    <i class="fa fa-print mr-3"></i> (+30 2610) 960322</p>
-                  <p><button class="button text-center">Contact</button></p>
-
-              </div>
-              <!--Grid column-->
-
-            </div>
-            <!--Grid row-->
-
-          </section>
+        </section>
+        <!-- Team -->
 <!--Section: Examples**********************************************************************-->
 
           <hr class="my-5">
@@ -471,51 +716,8 @@
 
     <!-- My Project ends here-->
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!--Google Maps-->
-    <script src="https://maps.google.com/maps/api/js"></script>
-
-    <!-- Google Maps settings -->
-    <script>
-    // Regular map
-    function regular_map() {
-      var var_location = new google.maps.LatLng(38.283659, 21.788985);
-
-      var var_mapoptions = {
-        center: var_location,
-        zoom: 17
-      };
-
-      var var_map = new google.maps.Map(document.getElementById("map-container"),
-        var_mapoptions);
-
-      var var_marker = new google.maps.Marker({
-        position: var_location,
-        map: var_map,
-        title: "Προκατ Β' Κτιρίου"
-      });
-    }
-
-    // Initialize maps
-    google.maps.event.addDomListener(window, 'load', regular_map);
-    </script>
 
 
-
-    <!-- Carousel options -->
-    <script>
-    $('.carousel').carousel({
-      interval: 3000,
-    })
-    </script>
     <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -538,6 +740,7 @@
 <script type="text/javascript" src="{{ asset('js/mdbjs/popper.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mdbjs/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mdbjs/mdb.min.js') }}"></script>
+
 
     </body>
 

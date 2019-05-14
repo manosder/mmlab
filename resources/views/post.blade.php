@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>{{ $post->title }}</title>
+	  <link rel="shortcut icon" href="../../logo1.png" type="image/x-icon" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,6 +50,9 @@
     font-size: 14px;
   }
 }
+.research {
+	height: 40%;
+}
 
 </style>
 <body>
@@ -57,7 +61,7 @@
     <!-- Start your project here-->
     <div class="se-pre-con"></div>
     <!--Main Navigation-->
-    <header>
+    <header class="research">
 
       @include('inc.navbar')
 
@@ -72,19 +76,13 @@
                       <div class="col-md-10">
 
                           <!-- Heading -->
-                          <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">mmLab</h2>
+                          <h2 class="display-4 font-weight-bold white-text pt-8 mb-2">{{ $post->title }}</h2>
 
                           <!-- Divider -->
                           <hr class="hr-light">
 
                           <!-- Description -->
-                          <h4 class="white-text my-12">{{ $post->title }}</h4>
-                          <button type="button" class="btn btn-outline-white collapsible text-center">Read more<i class="fa fa-book ml-2"></i></button>
-                         <div class="content">
-                           <div class="article-content">          <p>{!! $post->body !!}</p>
 
-         </div>
-                         </div>
                       </div>
 
                   </div>
@@ -99,7 +97,13 @@
     </header>
     <!--Main Navigation-->
 
+		<hr class="hr-light">
 
+		<!-- Description -->
+		<h4 class="white-text my-12">{{ $post->title }}</h4>
+
+
+		 <p><div class="article-content"><p>{!! $post->body !!}</p> </div></p>
 
     <!--Footer-->
     <footer class="page-footer unique-color-dark">

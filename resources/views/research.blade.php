@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Εργαστήριο Γραφικών, Πολυμέσων & Γεωγραφικών Συστημάτων</title>
+  <link rel="shortcut icon" href="../../logo1.png" type="image/x-icon" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -49,7 +50,9 @@
     font-size: 14px;
   }
 }
-
+.research{
+  height: 40%;
+}
 </style>
 
 <body>
@@ -57,7 +60,7 @@
   <!-- Start your project here-->
   <div class="se-pre-con"></div>
   <!--Main Navigation-->
-  <header>
+  <header class="research">
 
     @include('inc.navbar')
 
